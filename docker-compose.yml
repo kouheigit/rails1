@@ -18,9 +18,11 @@ services:
     build: .
     command: bash -c "bundle exec rails server -b 0.0.0.0 -p 3000"
     volumes:
-      - .:/app
+      - .:/rails
       - bundle_data:/usr/local/bundle
     environment:
+      RAILS_ENV: development
+      SECRET_KEY_BASE: dummy_secret_key_base
       DATABASE_HOST: db
       DATABASE_USERNAME: app_user
       DATABASE_PASSWORD: app_password
