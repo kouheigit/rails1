@@ -1,0 +1,2 @@
+class TodoUser < ApplicationRecord
+end
