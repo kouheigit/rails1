@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Rails版TodoUserシステム - Dockerコンテナに入るスクリプト
+# Laravel Sailの `./vendor/bin/sail shell` に相当
+
+docker-compose exec web bash
+

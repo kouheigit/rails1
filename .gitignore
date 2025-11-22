@@ -33,3 +33,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore Rails版TodoUserシステム実装手順書 files
+Rails版TodoUserシステム実装手順書.md
+Rails版TodoUserシステム実装手順書.docx
