@@ -3,7 +3,7 @@ class TodoStatus < ApplicationRecord
  validates :name, presence: true, uniqueness: true
  validates :label,presence: true
 
- #リレーション
+ #リレーション(リレーション)
  has_many :todo_tasks, dependent: :destroy
 end
 
@@ -13,12 +13,22 @@ end
 #### app/models/todo_status.rb
 
 ```ruby
-class TodoStatus < ApplicationRecord
-  # バリデーション
-  validates :name, presence: true, uniqueness: true
-  validates :label, presence: true
+<?php
 
-  # リレーション
-  has_many :todo_tasks, dependent: :destroy
-end
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class TodoStatus extends Model
+{
+    // バリデーション
+    // validates :name, presence: true, uniqueness: true
+    // validates :label, presence: true
+
+    // リレーション
+    public function todoTasks()
+    {
+        return $this->hasMany(TodoTask::class);
+    }
+}
 ```
