@@ -6,7 +6,7 @@ class TodoUser < ApplicationRecord
   validates :name, presence: true
   validates :email presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  
+  #リレーション
   has_many :todo_tasks, dependent: :destroy
 end
 
