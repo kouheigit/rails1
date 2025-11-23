@@ -9,6 +9,8 @@ class Todo < ApplicationRecord
   # スコープ
   scope :recent, -> { order(created_at: :desc) }
   scope :by_user, ->(user_id) { where(user_id: user_id) }
+
+```ruby
 end
 <?php
 
@@ -39,3 +41,4 @@ class Todo extends Model
         return $query->where('user_id', $userId);
     }
 }
+```
