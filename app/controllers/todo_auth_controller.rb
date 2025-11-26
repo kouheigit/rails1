@@ -1,0 +1,2 @@
+class TodoAuthController < ApplicationController
+end
