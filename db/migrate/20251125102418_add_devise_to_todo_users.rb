@@ -10,15 +10,15 @@ class AddDeviseToTodoUsers < ActiveRecord::Migration[7.1]
 
       ## Recoverable
       unless column_exists?(:todo_users, :reset_password_token)
-        t.string   :reset_password_token
+      t.string   :reset_password_token
       end
       unless column_exists?(:todo_users, :reset_password_sent_at)
-        t.datetime :reset_password_sent_at
+      t.datetime :reset_password_sent_at
       end
 
       ## Rememberable
       unless column_exists?(:todo_users, :remember_created_at)
-        t.datetime :remember_created_at
+      t.datetime :remember_created_at
       end
 
       ## Trackable
@@ -49,7 +49,7 @@ class AddDeviseToTodoUsers < ActiveRecord::Migration[7.1]
       add_index :todo_users, :email, unique: true
     end
     unless index_exists?(:todo_users, :reset_password_token)
-      add_index :todo_users, :reset_password_token, unique: true
+    add_index :todo_users, :reset_password_token, unique: true
     end
     # add_index :todo_users, :confirmation_token,   unique: true
     # add_index :todo_users, :unlock_token,         unique: true
